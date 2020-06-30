@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.email       = ["info@phcdevworks.com"]
   spec.homepage    = "https://phcdevworks.com/"
   spec.summary     = "Rails 6 - Engine - Core - Modules"
-  spec.description = ""
+  spec.description = "Core modules for PHCDevworks plugins."
   spec.license     = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the "allowed_push_host"
@@ -49,7 +49,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency "mini_magick", "~> 4.10"
   
   # Security Dependencies
-  spec.add_dependency "phcdevworks_accounts", "~> 1.11"
+  spec.add_dependency "phcdevworks_accounts", "~> 1.12"
   
   # Development Dependencies
   spec.add_development_dependency "sqlite3", "~> 1.4"
