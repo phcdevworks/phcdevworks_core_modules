@@ -11,7 +11,7 @@ module PhcdevworksCoreModules
 
     # GET /modules/categories
     def index
-      @modules_categories = Modules::Category.all
+      @modules_categories = Modules::Category.order('category_name ASC')
     end
 
     # GET /modules/categories/1
