@@ -47,7 +47,7 @@ module PhcdevworksCoreModules
     def update
       respond_to do |format|
         if @modules_category.update(modules_category_params)
-          format.html { redirect_to modules_categories_path, :flash => { :notice => 'Tutorial has been Updated.' }}
+          format.html { redirect_to modules_categories_path, :flash => { :notice => 'Category has been Updated.' }}
           format.json { render :show, status: :ok, location: @modules_category }
         else
           format.html { render :edit }
@@ -74,7 +74,7 @@ module PhcdevworksCoreModules
 
     # Whitelist
     def modules_category_params
-      params.require(:modules_category).permit(:category_name)
+      params.require(:modules_category).permit(:category_name, :seo_twitter_image, :seo_open_graph_image)
     end
 
   end

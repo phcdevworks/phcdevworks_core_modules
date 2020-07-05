@@ -1,0 +1,67 @@
+<!-- Form - Optimization - Post -->
+<%= form_with(model: marketing_optimization, local: true) do |form| %>
+
+    <!-- PHCNotifi Render Validation -->
+    <%= render "phcdevworks_notifications/bootstrap/validations", :object => @marketing_optimization %>
+    <!-- PHCNotifi Render Validation -->
+
+    <!-- Form Input Fields -->
+    <div class="form-group">
+        <%= form.label :seo_title, "SEO Title" %>
+        <%= form.text_field :seo_title, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+        <%= form.label :seo_description, "SEO Description" %>
+        <%= form.text_area :seo_description, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+        <%= form.label :seo_open_graph_title, "SEO OG Title" %>
+        <%= form.text_field :seo_open_graph_title, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+        <%= form.label :seo_open_graph_description, "SEO OG Description" %>
+        <%= form.text_field :seo_open_graph_description, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+        <%= form.label :seo_open_graph_post_type, "SEO OG Type" %>
+        <%= form.text_field :seo_open_graph_post_type, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+        <%= form.label :seo_open_graph_url, "SEO OG URL" %>
+        <%= form.text_field :seo_open_graph_url, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+        <%= form.label :seo_twitter_title, "SEO Twitter Title" %>
+        <%= form.text_field :seo_twitter_title, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+        <%= form.label :seo_twitter_description, "SEO Twitter Description" %>
+        <%= form.text_area :seo_twitter_description, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+        <%= form.label :seo_twitter_post_type, "SEO Twitter Type" %>
+        <%= form.text_field :seo_twitter_post_type, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+        <%= form.label :seo_twitter_url, "SEO Twitter URL" %>
+        <%= form.text_field :seo_twitter_url, class: "form-control" %>
+    </div>
+    <!-- Form Input Fields -->
+
+    <!-- Form Submition Button -->
+    <div class="actions">
+        <%= form.submit class: "btn btn-primary" %>
+    </div>
+    <!-- For Submition Button -->
+
+<% end %>
+<!-- Form - Optimization - Post -->

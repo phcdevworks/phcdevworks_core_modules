@@ -1,5 +1,5 @@
 module PhcdevworksCoreModules
-  class Modules::Category < ApplicationRecord
+  class Marketing::Optimization < ApplicationRecord
 
     # Clean URL Initialize
     extend FriendlyId
@@ -9,7 +9,7 @@ module PhcdevworksCoreModules
     has_one_attached :seo_open_graph_image
 
     # Paper Trail Initialize
-    has_paper_trail :class_name => "PhcdevworksCoreModules::CoreCategoryVersions"
+    has_paper_trail :class_name => "PhcdevworksCoreModules::CoreOptimizationVersions"
 
     # Relationships
     belongs_to :user, class_name: "PhcdevworksAccounts::User"
@@ -19,15 +19,20 @@ module PhcdevworksCoreModules
     has_and_belongs_to_many :posts, class_name: "PhcdevworksTutorials::Command::Post", :join_table => "phcdevworks_tutorials_categories_commands", :dependent => :destroy
 
     # Form Fields Validation
-    validates :category_name,
-      presence: true,
-      uniqueness: true
+    validates :seo_title,
+      presence: true
+
+    validates :seo_open_graph_title,
+      presence: true
+
+    validates :seo_twitter_title,
+      presence: true
 
     # Clean URL Define
-    friendly_id :phcdev_core_category_nice_urls, use: [:slugged, :finders]
+    friendly_id :phcdev_core_optimization_nice_urls, use: [:slugged, :finders]
 
-    def phcdev_core_category_nice_urls
-      [:category_name]
+    def phcdev_core_optimization_nice_urls
+      [:id, :seo_title].join("-")
     end
 
   end
