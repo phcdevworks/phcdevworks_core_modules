@@ -11,13 +11,15 @@ module PhcdevworksCoreModules
     # Paper Trail Initialize
     has_paper_trail :class_name => "PhcdevworksCoreModules::CoreCategoryVersions"
 
-    # Relationships
+    # Relationships for Local
     belongs_to :user, class_name: "PhcdevworksAccounts::User"
+    belongs_to :optimization, class_name: "PhcdevworksCoreModules::Marketing::Optimization"
+    
+    # Relationships for PHCDevworks Plugins
     has_and_belongs_to_many :posts, class_name: "PhcdevworksPress::Article::Post", :join_table => "phcdevworks_press_categories_posts", :dependent => :destroy
     has_and_belongs_to_many :posts, class_name: "PhcdevworksPortfolio::Project::Post", :join_table => "phcdevworks_portfolio_categories_posts", :dependent => :destroy
     has_and_belongs_to_many :posts, class_name: "PhcdevworksTutorials::Tutorial::Post", :join_table => "phcdevworks_tutorials_categories_posts", :dependent => :destroy
     has_and_belongs_to_many :posts, class_name: "PhcdevworksTutorials::Command::Post", :join_table => "phcdevworks_tutorials_categories_commands", :dependent => :destroy
-    has_and_belongs_to_many :optimizations, class_name: 'PhcdevworksCoreModules::Core::Optimization', :join_table => "phcdevworks_core_modules_categories_optimizations", :dependent => :destroy
 
     # Form Fields Validation
     validates :category_name,

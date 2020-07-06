@@ -74,7 +74,7 @@ module PhcdevworksCoreModules
 
     # Whitelist
     def post_category_params
-      params.require(:post_category).permit(:category_name, :slug, :user_id, :org_id)
+      params.require(:post_category).permit(:category_name, :slug, :optimization_id, :user_id, :org_id)
     end
 
   end
