@@ -2,12 +2,12 @@ PhcdevworksCoreModules::Engine.routes.draw do
 
     # Routes for Posts
     namespace :post do
-        resources :categories, class_name: 'Core::Post::Category'
+        resources :categories, class_name: 'Post::Category'
     end
 
     # Routes for Marketing
     namespace :marketing do
-        resources :optimizations, class_name: 'Core::Marketing::Optimization'
+        resources :optimizations, class_name: 'Marketing::Optimization'
     end
 
     # Mount Routes
