@@ -1,5 +1,5 @@
 module PhcdevworksCoreModules
-  class Modules::Category < ApplicationRecord
+  class Post::Category < ApplicationRecord
 
     # Clean URL Initialize
     extend FriendlyId
@@ -17,20 +17,20 @@ module PhcdevworksCoreModules
     has_and_belongs_to_many :posts, class_name: "PhcdevworksPortfolio::Project::Post", :join_table => "phcdevworks_portfolio_categories_posts", :dependent => :destroy
     has_and_belongs_to_many :posts, class_name: "PhcdevworksTutorials::Tutorial::Post", :join_table => "phcdevworks_tutorials_categories_posts", :dependent => :destroy
     has_and_belongs_to_many :posts, class_name: "PhcdevworksTutorials::Command::Post", :join_table => "phcdevworks_tutorials_categories_commands", :dependent => :destroy
-    has_and_belongs_to_many :categories, class_name: 'PhcdevworksCoreModules::Core::Category', :join_table => "phcdevworks_core_categories_optimizations", :dependent => :destroy
-
+    has_and_belongs_to_many :optimizations, class_name: 'PhcdevworksCoreModules::Core::Optimization', :join_table => "phcdevworks_core_modules_categories_optimizations", :dependent => :destroy
 
     # Form Fields Validation
     validates :category_name,
-      presence: true,
-      uniqueness: true
-
+    presence: true,
+    uniqueness: true
+    
     # Clean URL Define
     friendly_id :phcdev_core_category_nice_urls, use: [:slugged, :finders]
-
+    
     def phcdev_core_category_nice_urls
-      [:category_name]
+    [:category_name]
     end
-
+    
+    
   end
 end

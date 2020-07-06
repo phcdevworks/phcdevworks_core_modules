@@ -1,5 +1,8 @@
 PhcdevworksCoreModules::Engine.routes.draw do
 
+  namespace :post do
+    resources :categories
+  end
   namespace :marketing do
     resources :optimizations
   end

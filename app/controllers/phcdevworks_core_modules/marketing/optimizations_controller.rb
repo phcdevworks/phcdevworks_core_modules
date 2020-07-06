@@ -74,7 +74,7 @@ module PhcdevworksCoreModules
 
     # Whitelist
     def marketing_optimization_params
-      params.require(:marketing_optimization).permit(:seo_title, :seo_description, :seo_open_graph_post_type, :seo_open_graph_url, :seo_open_graph_title, :seo_open_graph_description, :seo_twitter_post_type, :seo_twitter_url, :seo_twitter_title, :seo_twitter_description)
+      params.require(:marketing_optimization).permit(:seo_title, :seo_description, :seo_open_graph_post_type, :seo_open_graph_url, :seo_open_graph_title, :seo_open_graph_description, :seo_twitter_post_type, :seo_twitter_url, :seo_twitter_title, :seo_twitter_description, :post_images, :slug, :user_id, :org_id)
     end
 
   end
