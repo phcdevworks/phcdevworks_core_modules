@@ -32,7 +32,7 @@ module PhcdevworksCoreModules
     friendly_id :phcdev_core_optimization_nice_urls, use: [:slugged, :finders]
 
     def phcdev_core_optimization_nice_urls
-      [:id, :seo_title].join("-")
+      [:seo_title].join("-")
     end
 
   end

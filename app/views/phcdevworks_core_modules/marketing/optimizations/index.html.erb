@@ -62,14 +62,6 @@
                                             <%= link_to "Remove", marketing_optimization, method: :delete, data: { confirm: "Are you sure? This action cannot be reversed." }, class: "btn btn-danger btn-xs" %>
                                         </div>
                                     </td>
-
-                                    <td><%= marketing_optimization.seo_open_graph_url %></td>
-                                    <td><%= marketing_optimization.seo_open_graph_description %></td>
-                                    <td><%= marketing_optimization.seo_twitter_url %></td>
-                                    <td><%= marketing_optimization.seo_twitter_description %></td>
-                                    <td><%= link_to 'Show', marketing_optimization %></td>
-                                    <td><%= link_to 'Edit', edit_marketing_optimization_path(marketing_optimization) %></td>
-                                    <td><%= link_to 'Destroy', marketing_optimization, method: :delete, data: { confirm: 'Are you sure?' } %></td>
                                </tr>
 					        <% end %>
 						</tbody>
