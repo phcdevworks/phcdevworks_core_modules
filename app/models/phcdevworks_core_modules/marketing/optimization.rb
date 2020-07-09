@@ -9,7 +9,7 @@ module PhcdevworksCoreModules
     has_one_attached :seo_open_graph_image
 
     # Paper Trail Initialize
-    has_paper_trail :class_name => "PhcdevworksCoreModules::CoreOptimizationVersions"
+    has_paper_trail :class_name => "PhcdevworksCoreModules::MarketingOptimizationVersions"
 
     # Relationships for Local
     belongs_to :user, class_name: "PhcdevworksAccounts::User"

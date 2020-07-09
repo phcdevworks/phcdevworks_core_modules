@@ -9,7 +9,7 @@ module PhcdevworksCoreModules
     has_one_attached :seo_open_graph_image
 
     # Paper Trail Initialize
-    has_paper_trail :class_name => "PhcdevworksCoreModules::CoreCategoryVersions"
+    has_paper_trail :class_name => "PhcdevworksCoreModules::PostCategoryVersions"
 
     # Relationships for Local
     belongs_to :user, class_name: "PhcdevworksAccounts::User"
@@ -31,14 +31,13 @@ module PhcdevworksCoreModules
     validates :category_name,
     presence: true,
     uniqueness: true
-    
+
     # Clean URL Define
     friendly_id :phcdev_core_category_nice_urls, use: [:slugged, :finders]
-    
+
     def phcdev_core_category_nice_urls
-    [:category_name]
+      [:category_name]
     end
-    
-    
+
   end
 end
