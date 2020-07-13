@@ -50,11 +50,11 @@
                         <tbody>
                             <% @marketing_optimizations.each do |marketing_optimization| %>
                                 <tr>
-                                    <td><%= marketing_optimization.seo_title %></td>
-                                    <td><%= marketing_optimization.seo_open_graph_title %></td>
-                                    <td><%= marketing_optimization.seo_open_graph_post_type %></td>
-                                    <td><%= marketing_optimization.seo_twitter_title %></td>
-                                    <td><%= marketing_optimization.seo_twitter_post_type %></td>
+                                    <td><%= marketing_optimization.marketing_optimization_page_title %></td>
+                                    <td><%= marketing_optimization.marketing_optimization_og_title %></td>
+                                    <td><%= marketing_optimization.marketing_optimization_og_type %></td>
+                                    <td><%= marketing_optimization.marketing_optimization_twitter_title %></td>
+                                    <td><%= marketing_optimization.marketing_optimization_twitter_type %></td>
                                     <td>
                                         <div class="btn-group d-flex" role="group">
                                             <%= link_to "SEO Details", marketing_optimization, class: "btn btn-purple btn-xs" %>

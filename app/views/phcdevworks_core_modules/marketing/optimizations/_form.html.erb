@@ -7,74 +7,76 @@
 
     <!-- Form Input Fields -->
     <div class="form-group">
-        <%= form.label :seo_title, "SEO Title" %>
-        <%= form.text_field :seo_title, class: "form-control" %>
+        <%= form.label :marketing_optimization_page_title, "Page Title" %>
+        <%= form.text_field :marketing_optimization_page_title, class: "form-control" %>
     </div>
 
     <div class="form-group">
-        <%= form.label :seo_description, "SEO Description" %>
-        <%= form.text_area :seo_description, class: "form-control" %>
+        <%= form.label :marketing_optimization_page_description, "Page Description" %>
+        <%= form.text_area :marketing_optimization_page_description, class: "form-control" %>
     </div>
 
     <div class="form-group">
-        <%= form.label :seo_open_graph_title, "SEO OG Title" %>
-        <%= form.text_field :seo_open_graph_title, class: "form-control" %>
+        <%= form.label :marketing_optimization_og_title, "Open Graph Title" %>
+        <%= form.text_field :marketing_optimization_og_title, class: "form-control" %>
     </div>
 
     <div class="form-group">
-        <%= form.label :seo_open_graph_description, "SEO OG Description" %>
-        <%= form.text_field :seo_open_graph_description, class: "form-control" %>
+        <%= form.label :marketing_optimization_og_description, "Open Graph Description" %>
+        <%= form.text_field :marketing_optimization_og_description, class: "form-control" %>
     </div>
 
     <div class="form-group">
-        <%= form.label :seo_open_graph_post_type, "SEO OG Type" %>
-        <%= form.text_field :seo_open_graph_post_type, class: "form-control" %>
+        <%= form.label :marketing_optimization_og_type, "Open Graph Type" %>
+        <%= form.text_field :marketing_optimization_og_type, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+        <%= form.label :marketing_optimization_og_url, "Open Graph URL" %>
+        <%= form.text_field :marketing_optimization_og_url, class: "form-control" %>
     </div>
 
     <div class="form-group field_with_errors">
-        <%= form.label :seo_open_graph_image, "Featured Image" %>
-        <%= form.file_field :seo_open_graph_image, class: "form-control" %>
-        <% if form.object.seo_open_graph_image.attached? %>
-            <%= image_tag main_app.url_for(form.object.seo_open_graph_image), class: "img-responsive img-thumbnail" %>
-            <%= form.label :remove_seo_open_graph_image %>
-            <%= form.check_box :remove_seo_open_graph_image %>
-        <% end %>
-    </div>
-				
-    <div class="form-group">
-        <%= form.label :seo_open_graph_url, "SEO OG URL" %>
-        <%= form.text_field :seo_open_graph_url, class: "form-control" %>
-    </div>
-
-    <div class="form-group">
-        <%= form.label :seo_twitter_title, "SEO Twitter Title" %>
-        <%= form.text_field :seo_twitter_title, class: "form-control" %>
-    </div>
-
-    <div class="form-group">
-        <%= form.label :seo_twitter_description, "SEO Twitter Description" %>
-        <%= form.text_area :seo_twitter_description, class: "form-control" %>
-    </div>
-
-    <div class="form-group">
-        <%= form.label :seo_twitter_post_type, "SEO Twitter Type" %>
-        <%= form.text_field :seo_twitter_post_type, class: "form-control" %>
-    </div>
-
-    <div class="form-group field_with_errors">
-        <%= form.label :seo_twitter_image, "Featured Image" %>
-        <%= form.file_field :seo_twitter_image, class: "form-control" %>
-        <% if form.object.seo_twitter_image.attached? %>
-            <%= image_tag main_app.url_for(form.object.seo_twitter_image), class: "img-responsive img-thumbnail" %>
-            <%= form.label :remove_seo_twitter_image %>
-            <%= form.check_box :remove_seo_twitter_image %>
+        <%= form.label :marketing_optimization_og_image, "Featured Image" %>
+        <%= form.file_field :marketing_optimization_og_image, class: "form-control" %>
+        <% if form.object.marketing_optimization_og_image.attached? %>
+            <%= image_tag main_app.url_for(form.object.marketing_optimization_og_image), class: "img-responsive img-thumbnail" %>
+            <%= form.label :remove_marketing_optimization_og_image %>
+            <%= form.check_box :remove_marketing_optimization_og_image %>
         <% end %>
     </div>
 
     <div class="form-group">
-        <%= form.label :seo_twitter_url, "SEO Twitter URL" %>
-        <%= form.text_field :seo_twitter_url, class: "form-control" %>
+        <%= form.label :marketing_optimization_twitter_title, "Twitter Card Title" %>
+        <%= form.text_field :marketing_optimization_twitter_title, class: "form-control" %>
     </div>
+
+    <div class="form-group">
+        <%= form.label :marketing_optimization_twitter_description, "Twitter Card Description" %>
+        <%= form.text_area :marketing_optimization_twitter_description, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+        <%= form.label :marketing_optimization_twitter_type, "Twitter Card Type" %>
+        <%= form.text_field :marketing_optimization_twitter_type, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+        <%= form.label :marketing_optimization_twitter_url, "Twitter Card URL" %>
+        <%= form.text_field :marketing_optimization_twitter_url, class: "form-control" %>
+    </div>
+
+    <div class="form-group field_with_errors">
+        <%= form.label :marketing_optimization_twitter_image, "Featured Image" %>
+        <%= form.file_field :marketing_optimization_twitter_image, class: "form-control" %>
+        <% if form.object.marketing_optimization_twitter_image.attached? %>
+            <%= image_tag main_app.url_for(form.object.marketing_optimization_twitter_image), class: "img-responsive img-thumbnail" %>
+            <%= form.label :remove_marketing_optimization_twitter_image %>
+            <%= form.check_box :remove_marketing_optimization_twitter_image %>
+        <% end %>
+    </div>
+
+
     <!-- Form Input Fields -->
 
     <!-- Form Submition Button -->

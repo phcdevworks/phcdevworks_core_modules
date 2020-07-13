@@ -1,3 +1,4 @@
+# This migration comes from phcdevworks_core_modules (originally 20200705223718)
 class CreatePhcdevworksCoreModulesMarketingOptimizations < ActiveRecord::Migration[6.0]
   def change
     create_table :phcdevworks_core_modules_marketing_optimizations do |t|

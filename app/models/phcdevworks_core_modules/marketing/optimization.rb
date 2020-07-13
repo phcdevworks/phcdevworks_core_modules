@@ -5,8 +5,8 @@ module PhcdevworksCoreModules
     extend FriendlyId
 
     # Image Upload
-    has_one_attached :seo_twitter_image
-    has_one_attached :seo_open_graph_image
+    has_one_attached :marketing_optimization_twitter_image
+    has_one_attached :marketing_optimization_og_image
 
     # Paper Trail Initialize
     has_paper_trail :class_name => "PhcdevworksCoreModules::MarketingOptimizationVersions"
@@ -34,20 +34,20 @@ module PhcdevworksCoreModules
     end
 
     # Form Fields Validation
-    validates :seo_title,
+    validates :marketing_optimization_page_title,
       presence: true
 
-    validates :seo_open_graph_title,
+    validates :marketing_optimization_og_title,
       presence: true
 
-    validates :seo_twitter_title,
+    validates :marketing_optimization_twitter_title,
       presence: true
 
     # Clean URL Define
-    friendly_id :phcdev_core_optimization_nice_urls, use: [:slugged, :finders]
+    friendly_id :marketing_optimization_nice_urls, use: [:slugged, :finders]
 
-    def phcdev_core_optimization_nice_urls
-      [:seo_title].join("-")
+    def marketing_optimization_nice_urls
+      [:marketing_optimization_page_title]
     end
 
   end

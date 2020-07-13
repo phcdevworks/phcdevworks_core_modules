@@ -11,7 +11,7 @@ module PhcdevworksCoreModules
 
     # GET /marketing/optimizations
     def index
-      @marketing_optimizations = Marketing::Optimization.order('seo_title ASC')
+      @marketing_optimizations = Marketing::Optimization.order('marketing_optimization_page_title ASC')
     end
 
     # GET /marketing/optimizations/1
@@ -74,7 +74,7 @@ module PhcdevworksCoreModules
 
     # Whitelist
     def marketing_optimization_params
-      params.require(:marketing_optimization).permit(:seo_title, :seo_description, :seo_open_graph_post_type, :seo_open_graph_url, :seo_open_graph_title, :seo_open_graph_description, :seo_open_graph_image, :seo_twitter_post_type, :seo_twitter_url, :seo_twitter_title, :seo_twitter_description, :seo_twitter_image, :slug, :user_id, :org_id)
+      params.require(:marketing_optimization).permit(:marketing_optimization_page_title, :marketing_optimization_page_description, :marketing_optimization_og_title, :marketing_optimization_og_description, :marketing_optimization_og_type, :marketing_optimization_og_url, :marketing_optimization_twitter_title, :marketing_optimization_twitter_description, :marketing_optimization_twitter_type, :marketing_optimization_twitter_url, :marketing_optimization_twitter_image, :marketing_optimization_og_image, :slug, :user_id, :org_id)
     end
 
   end

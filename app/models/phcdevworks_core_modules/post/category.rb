@@ -4,10 +4,6 @@ module PhcdevworksCoreModules
     # Clean URL Initialize
     extend FriendlyId
 
-    # Image Upload
-    has_one_attached :seo_twitter_image
-    has_one_attached :seo_open_graph_image
-
     # Paper Trail Initialize
     has_paper_trail :class_name => "PhcdevworksCoreModules::PostCategoryVersions"
 
@@ -28,15 +24,15 @@ module PhcdevworksCoreModules
     end
 
     # Form Fields Validation
-    validates :category_name,
-    presence: true,
-    uniqueness: true
+    validates :post_category_name,
+      presence: true,
+      uniqueness: true
 
     # Clean URL Define
-    friendly_id :phcdev_core_category_nice_urls, use: [:slugged, :finders]
+    friendly_id :post_category_nice_urls, use: [:slugged, :finders]
 
-    def phcdev_core_category_nice_urls
-      [:category_name]
+    def post_category_nice_urls
+      [:post_category_name]
     end
 
   end

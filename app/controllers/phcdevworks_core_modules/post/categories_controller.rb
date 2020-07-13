@@ -11,7 +11,7 @@ module PhcdevworksCoreModules
 
     # GET /post/categories
     def index
-      @post_categories = Post::Category.order('category_name ASC')
+      @post_categories = Post::Category.order('post_category_name ASC')
     end
 
     # GET /post/categories/1
@@ -74,7 +74,7 @@ module PhcdevworksCoreModules
 
     # Whitelist
     def post_category_params
-      params.require(:post_category).permit(:category_name, :slug, :optimization_id, :user_id, :org_id)
+      params.require(:post_category).permit(:post_category_name, :slug, :optimization_id, :user_id, :org_id)
     end
 
   end
