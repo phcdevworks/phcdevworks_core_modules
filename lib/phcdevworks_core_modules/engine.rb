@@ -1,6 +1,6 @@
 module PhcdevworksCoreModules
   class Engine < ::Rails::Engine
-  
+
     # Load Main Dependencies
     require "jbuilder"
     require "paper_trail"
@@ -28,7 +28,7 @@ module PhcdevworksCoreModules
 
     # Load User Accounts
     require "phcdevworks_accounts"
-    
+
     # Engine Namespace
     isolate_namespace PhcdevworksCoreModules
 
