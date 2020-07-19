@@ -23,8 +23,8 @@ module PhcdevworksCoreModules
     end
 
     if defined?phcdevworks_tutorials
-      has_and_belongs_to_many :posts, class_name: "PhcdevworksTutorials::Tutorial::Post", :join_table => "phcdevworks_tutorials_categories_posts", :dependent => :destroy
-      has_and_belongs_to_many :posts, class_name: "PhcdevworksTutorials::Command::Post", :join_table => "phcdevworks_tutorials_categories_commands", :dependent => :destroy
+      has_and_belongs_to_many :posts, class_name: "PhcdevworksTutorials::Tutorial::Post", :join_table => "phcdevworks_tutorials_tutorial_categories_posts", :dependent => :destroy
+      has_and_belongs_to_many :posts, class_name: "PhcdevworksTutorials::Command::Post", :join_table => "phcdevworks_tutorials_command_categories_post", :dependent => :destroy
     end
 
     # Form Fields Validation
