@@ -28,7 +28,7 @@
 
     <div class="form-group">
         <%= form.label :marketing_optimization_og_type, "Open Graph Type" %>
-        <%= form.text_field :marketing_optimization_og_type, class: "form-control" %>
+        <%= form.select( :marketing_optimization_og_type, [["Website","website"]], {}, {class: "form-control"}) %>
     </div>
 
     <div class="form-group">
@@ -58,6 +58,11 @@
 
     <div class="form-group">
         <%= form.label :marketing_optimization_twitter_type, "Twitter Card Type" %>
+        <%= form.select( :tutorial_step_number, [["Summary","summary"],["Summary Large Image","summary_large_image"]], {}, {class: "form-control"}) %>
+    </div>
+
+    <div class="form-group">
+
         <%= form.text_field :marketing_optimization_twitter_type, class: "form-control" %>
     </div>
 
