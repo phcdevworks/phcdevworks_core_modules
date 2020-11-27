@@ -1,3 +1,3 @@
 module PhcdevworksCoreModules
-    VERSION = '6.2.1'
+    VERSION = '6.3.0'
 end
