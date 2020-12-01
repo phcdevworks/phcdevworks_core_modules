@@ -25,7 +25,7 @@ Gem::Specification.new do |spec|
 
   # Main Dependencies
   spec.add_dependency "rails", "~> 6.0", ">= 6.0.3.4"
-  spec.add_dependency 'jbuilder', '~> 2.10'
+  spec.add_dependency "jbuilder", "~> 2.10"
   spec.add_dependency "paper_trail", "~> 11.0"
 
   # Theme Dependencies
@@ -55,6 +55,8 @@ Gem::Specification.new do |spec|
   spec.add_dependency "phcdevworks_accounts", "~> 2.3"
   
   # Development Dependencies
+  spec.add_development_dependency "rspec-rails", "~> 4.0"
+  spec.add_development_dependency "factory_bot_rails", "~> 6.1"
   spec.add_development_dependency "sqlite3", "~> 1.4"
 
 end

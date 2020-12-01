@@ -35,5 +35,10 @@ module PhcdevworksCoreModules
     # Engine Namespace
     isolate_namespace PhcdevworksCoreModules
 
+    # Rspec Generators
+    config.generators do |g|
+      g.test_framework :rspec
+    end
+
   end
 end
