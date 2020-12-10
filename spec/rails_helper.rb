@@ -1,5 +1,7 @@
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 require 'spec_helper'
+require 'factory_bot_rails'
+
 ENV['RAILS_ENV'] ||= 'test'
 require File.expand_path('../test_app/config/environment.rb', __FILE__)
 # Prevent database truncation if the environment is production

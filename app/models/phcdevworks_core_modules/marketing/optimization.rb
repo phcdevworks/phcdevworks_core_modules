@@ -9,7 +9,7 @@ module PhcdevworksCoreModules
     has_one_attached :marketing_optimization_og_image
 
     # Paper Trail Initialize
-    has_paper_trail :class_name => "PhcdevworksCoreModules::MarketingOptimizationVersions"
+    has_paper_trail versions: {class_name: "PhcdevworksCoreModules::MarketingOptimizationVersions"}
 
     # Relationships for Local
     belongs_to :user, class_name: "PhcdevworksAccounts::User"
@@ -41,12 +41,6 @@ module PhcdevworksCoreModules
 
     # Form Fields Validation
     validates :marketing_optimization_page_title,
-      presence: true
-
-    validates :marketing_optimization_og_title,
-      presence: true
-
-    validates :marketing_optimization_twitter_title,
       presence: true
 
     # Clean URL Define
