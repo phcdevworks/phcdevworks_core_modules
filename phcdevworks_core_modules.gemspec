@@ -1,8 +1,8 @@
-$:.push File.expand_path("lib", __dir__)
-require "phcdevworks_core_modules/version"
+require_relative "lib/phcdevworks_core_modules/version"
 
 Gem::Specification.new do |spec|
 
+  # Engine Data
   spec.name        = "phcdevworks_core_modules"
   spec.version     = PhcdevworksCoreModules::VERSION
   spec.authors     = ["PHCDevworks"]
@@ -12,15 +12,13 @@ Gem::Specification.new do |spec|
   spec.description = "Core modules for PHCDevworks plugins."
   spec.license     = "MIT"
 
-  # Prevent pushing this gem to RubyGems.org. To allow pushes either set the "allowed_push_host"
-  # to allow pushing to a single host or delete this section to allow pushing to any host.
-  #if spec.respond_to?(:metadata)
-  #spec.metadata["allowed_push_host"] = "TODO: Set to "http://mygemserver.com""
-  #else
-  #raise "RubyGems 2.0 or newer is required to protect against " \
-  #"public gem pushes."
-  #end
+  # Engine Meta Data
+  spec.metadata["allowed_push_host"] = "https://rubygems.org/"
+  spec.metadata["homepage_uri"] = spec.homepage
+  spec.metadata["source_code_uri"] = "https://github.com/phcdevworks/phcdevworks_core_modules"
+  spec.metadata["changelog_uri"] = "https://github.com/phcdevworks/phcdevworks_core_modules/releases"
 
+  # Engine Files
   spec.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
 
   # Main Dependencies
@@ -42,7 +40,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency "wicked", "~> 1.3"
   spec.add_dependency "friendly_id", "~> 5.4"
   spec.add_dependency "gravtastic", "~> 3.2"
-  
+
   # Mailer Dependencies
   spec.add_dependency "mail_form", "~> 1.8"
 
@@ -50,10 +48,10 @@ Gem::Specification.new do |spec|
   spec.add_dependency "aws-sdk-s3", "~> 1.85"
   spec.add_dependency "google-cloud-storage", "~> 1.29"
   spec.add_dependency "mini_magick", "~> 4.11"
-  
+
   # Security Dependencies
-  spec.add_dependency "phcdevworks_accounts", "~> 2.5"
-  
+  spec.add_dependency "phcdevworks_accounts", "~> 3.0"
+
   # Development Dependencies
   spec.add_development_dependency "factory_bot_rails", "~> 6.1"
   spec.add_development_dependency "rspec-rails", "~> 4.0"
