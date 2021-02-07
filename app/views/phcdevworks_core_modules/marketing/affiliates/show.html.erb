@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Marketing affiliate name:</strong>
+  <%= @marketing_affiliate.marketing_affiliate_name %>
+</p>
+
+<p>
+  <strong>Marketing affiliate button name:</strong>
+  <%= @marketing_affiliate.marketing_affiliate_button_name %>
+</p>
+
+<p>
+  <strong>Marketing affiliate url:</strong>
+  <%= @marketing_affiliate.marketing_affiliate_url %>
+</p>
+
+<p>
+  <strong>Marketing affiliate original url:</strong>
+  <%= @marketing_affiliate.marketing_affiliate_original_url %>
+</p>
+
+<%= link_to 'Edit', edit_marketing_affiliate_path(@marketing_affiliate) %> |
+<%= link_to 'Back', marketing_affiliates_path %>

@@ -47,7 +47,7 @@ module PhcdevworksCoreModules
         def update
             respond_to do |format|
                 if @marketing_optimization.update(marketing_optimization_params)
-                    format.html { redirect_to marketing_optimizations_path, :flash => { :notice => 'Tutorial has been Updated.' }}
+                    format.html { redirect_to marketing_optimizations_path, :flash => { :notice => 'SEO Attributes has been Updated.' }}
                     format.json { render :show, status: :ok, location: @marketing_optimization }
                 else
                     format.html { render :edit }

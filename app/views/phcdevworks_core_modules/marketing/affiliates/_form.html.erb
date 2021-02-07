@@ -1,0 +1,37 @@
+<%= form_with(model: marketing_affiliate) do |form| %>
+  <% if marketing_affiliate.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(marketing_affiliate.errors.count, "error") %> prohibited this marketing_affiliate from being saved:</h2>
+
+      <ul>
+        <% marketing_affiliate.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :marketing_affiliate_name %>
+    <%= form.text_field :marketing_affiliate_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :marketing_affiliate_button_name %>
+    <%= form.text_field :marketing_affiliate_button_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :marketing_affiliate_url %>
+    <%= form.text_field :marketing_affiliate_url %>
+  </div>
+
+  <div class="field">
+    <%= form.label :marketing_affiliate_original_url %>
+    <%= form.text_field :marketing_affiliate_original_url %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

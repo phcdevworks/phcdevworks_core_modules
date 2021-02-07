@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Marketing Affiliates</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Marketing affiliate name</th>
+      <th>Marketing affiliate button name</th>
+      <th>Marketing affiliate url</th>
+      <th>Marketing affiliate original url</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @marketing_affiliates.each do |marketing_affiliate| %>
+      <tr>
+        <td><%= marketing_affiliate.marketing_affiliate_name %></td>
+        <td><%= marketing_affiliate.marketing_affiliate_button_name %></td>
+        <td><%= marketing_affiliate.marketing_affiliate_url %></td>
+        <td><%= marketing_affiliate.marketing_affiliate_original_url %></td>
+        <td><%= link_to 'Show', marketing_affiliate %></td>
+        <td><%= link_to 'Edit', edit_marketing_affiliate_path(marketing_affiliate) %></td>
+        <td><%= link_to 'Destroy', marketing_affiliate, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Marketing Affiliate', new_marketing_affiliate_path %>
