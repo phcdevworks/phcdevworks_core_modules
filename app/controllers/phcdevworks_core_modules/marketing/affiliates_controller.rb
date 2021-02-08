@@ -11,7 +11,7 @@ module PhcdevworksCoreModules
 
         # GET /marketing/affiliates
         def index
-            @marketing_affiliates = Marketing::Affiliate.order('marketing_optimization_page_title ASC')
+            @marketing_affiliates = Marketing::Affiliate.order('marketing_affiliate_name ASC')
         end
 
         # GET /marketing/affiliates/1
@@ -74,7 +74,7 @@ module PhcdevworksCoreModules
 
         # Whitelist
         def marketing_affiliate_params
-            params.require(:marketing_affiliate).permit(:marketing_affiliate_name, :marketing_affiliate_button_name, :marketing_affiliate_url, :marketing_affiliate_original_url)
+            params.require(:marketing_affiliate).permit(:marketing_affiliate_name, :marketing_affiliate_button_text, :marketing_affiliate_url, :marketing_affiliate_original_url)
         end
 
     end

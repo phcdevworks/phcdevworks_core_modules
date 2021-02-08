@@ -1,3 +1,4 @@
+# This migration comes from phcdevworks_core_modules (originally 20210207051304)
 class CreatePhcdevworksCoreModulesMarketingAffiliateVersions < ActiveRecord::Migration[6.1]
   TEXT_BYTES = 1_073_741_823
   def change
