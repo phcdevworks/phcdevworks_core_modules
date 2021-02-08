@@ -74,7 +74,7 @@ module PhcdevworksCoreModules
 
         # Whitelist
         def marketing_affiliate_params
-            params.require(:marketing_affiliate).permit(:marketing_affiliate_name, :marketing_affiliate_button_text, :marketing_affiliate_url, :marketing_affiliate_original_url)
+            params.require(:marketing_affiliate).permit(:marketing_affiliate_name, :marketing_affiliate_button_text, :marketing_affiliate_url, :marketing_affiliate_original_url, :slug, :user_id, :org_id)
         end
 
     end

@@ -1,5 +1,8 @@
 PhcdevworksCoreModules::Engine.routes.draw do
 
+  namespace :affiliate do
+    resources :links
+  end
   namespace :marketing do
     resources :affiliates
   end

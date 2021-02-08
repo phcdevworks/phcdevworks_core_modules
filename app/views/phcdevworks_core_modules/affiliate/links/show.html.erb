@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Affiliate link name:</strong>
+  <%= @affiliate_link.affiliate_link_name %>
+</p>
+
+<p>
+  <strong>Affiliate link button text:</strong>
+  <%= @affiliate_link.affiliate_link_button_text %>
+</p>
+
+<p>
+  <strong>Affiliate link url:</strong>
+  <%= @affiliate_link.affiliate_link_url %>
+</p>
+
+<p>
+  <strong>Affiliate link original url:</strong>
+  <%= @affiliate_link.affiliate_link_original_url %>
+</p>
+
+<%= link_to 'Edit', edit_affiliate_link_path(@affiliate_link) %> |
+<%= link_to 'Back', affiliate_links_path %>

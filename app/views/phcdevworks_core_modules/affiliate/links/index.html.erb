@@ -1,0 +1,86 @@
+<!-- PHCTitleSEO Title Variables -->
+<% phc_title "Marketing Manager" %>
+<% phc_title_tagline "Affiliate Links" %>
+<% phc_breadcrumb_one yield(:phc_title_tagline) %>
+<% phc_breadcrumb_two link_to "Affiliate Link Index", phcdevworks_core_modules.affiliate_links_path %>
+<!-- PHCTitleSEO Title Variables -->
+
+<!-- Page Bradcrumbs -->
+<ol class="breadcrumb pull-right">
+    <li class="breadcrumb-item"><%= yield(:phc_breadcrumb_one) %></li>
+    <li class="breadcrumb-item active"><%= yield(:phc_breadcrumb_two) %></li>
+</ol>
+<!-- Page Bradcrumbs -->
+
+<!-- Page Header -->
+<h2 class="page-header"><%= yield(:phc_title) %></h2>
+<!-- Page Header -->
+
+<!-- Page Content -->
+<div class="row">
+    <div class="col-lg-12">
+
+        <!-- Panel -->
+        <div class="panel panel-inverse">
+
+            <!-- Panel - Heading -->
+            <div class="panel-heading">
+                <h4 class="panel-title"><%= yield(:phc_title) %> - <%= yield(:phc_title_tagline) %></h4>
+            </div>
+            <!-- Panel - Heading -->
+
+            <!-- Panel - Body -->
+            <div class="panel-body">
+
+                <!-- Index - Table -->
+                <div class="table-responsive">
+                    <table class="table table-striped table-bordered">
+
+                        <thead>
+                            <tr>
+                                <th>Link Name</th>
+                                <th>Button Text</th>
+                                <th>Affiliate URL</th>
+                                <th>Original URL</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <% @affiliate_links.each do |affiliate_link| %>
+                                <tr>
+                                    <td><%= affiliate_link.affiliate_link_name %></td>
+                                    <td><%= affiliate_link.affiliate_link_button_text %></td>
+                                    <td><%= affiliate_link.affiliate_link_url %></td>
+                                    <td><%= affiliate_link.affiliate_link_original_url %></td>
+                                    <td>
+                                        <div class="btn-group d-flex" role="group">
+                                            <%= link_to "Link Details", affiliate_link, class: "btn btn-purple btn-xs" %>
+                                            <%= link_to "Update Link", edit_affiliate_link_path(affiliate_link), class: "btn btn-primary btn-xs" %>
+                                            <%= link_to "Remove", affiliate_link, method: :delete, data: { confirm: "Are you sure? This action cannot be reversed." }, class: "btn btn-danger btn-xs" %>
+                                        </div>
+                                    </td>
+                                </tr>
+                            <% end %>
+                        </tbody>
+
+                    </table>
+			    </div>
+			    <!-- Index - Table -->
+
+				<!-- New Button -->
+                <%= link_to phcdevworks_core_modules.new_affiliate_link_path, class: "btn btn-primary btn-sm" do %>
+                    <i class="fad fa-plus-circle"></i>
+                    Add a New Affiliate Link
+				<% end %>
+				<!-- New Button -->
+
+			</div>
+			<!-- Panel - Body -->
+
+		</div>
+		<!-- Panel -->
+
+	</div>
+</div>
+<!-- Page Content -->
