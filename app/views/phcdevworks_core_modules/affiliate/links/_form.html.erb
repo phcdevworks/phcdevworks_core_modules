@@ -1,37 +1,27 @@
 <%= form_with(model: affiliate_link) do |form| %>
-  <% if affiliate_link.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(affiliate_link.errors.count, "error") %> prohibited this affiliate_link from being saved:</h2>
 
-      <ul>
-        <% affiliate_link.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
+    <div class="form-group">
+        <%= form.label :affiliate_link_name, "Link Name" %>
+        <%= form.text_field :affiliate_link_name, class: "form-control" %>
     </div>
-  <% end %>
+    
+    <div class="form-group">
+        <%= form.label :affiliate_link_button_text, "Button Text" %>
+        <%= form.text_field :affiliate_link_button_text, class: "form-control" %>
+    </div>
+    
+    <div class="form-group">
+        <%= form.label :affiliate_link_url, "Affiliate Link" %>
+        <%= form.text_field :affiliate_link_url, class: "form-control" %>
+    </div>
+    
+    <div class="form-group">
+        <%= form.label :affiliate_link_original_url, "Original URL" %>
+        <%= form.text_field :affiliate_link_original_url, class: "form-control" %>
+    </div>
+    
+    <div class="actions">
+        <%= form.submit class: "btn btn-primary" %>
+    </div>
 
-  <div class="field">
-    <%= form.label :affiliate_link_name %>
-    <%= form.text_field :affiliate_link_name %>
-  </div>
-
-  <div class="field">
-    <%= form.label :affiliate_link_button_text %>
-    <%= form.text_field :affiliate_link_button_text %>
-  </div>
-
-  <div class="field">
-    <%= form.label :affiliate_link_url %>
-    <%= form.text_field :affiliate_link_url %>
-  </div>
-
-  <div class="field">
-    <%= form.label :affiliate_link_original_url %>
-    <%= form.text_field :affiliate_link_original_url %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
 <% end %>

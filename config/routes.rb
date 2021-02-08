@@ -3,9 +3,6 @@ PhcdevworksCoreModules::Engine.routes.draw do
   namespace :affiliate do
     resources :links
   end
-  namespace :marketing do
-    resources :affiliates
-  end
     # Routes for Posts
     namespace :post do
         resources :categories, class_name: 'Post::Category'
