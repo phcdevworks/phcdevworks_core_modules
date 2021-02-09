@@ -5,7 +5,7 @@ module PhcdevworksCoreModules
     extend FriendlyId
 
     # Paper Trail Initialize
-    has_paper_trail versions: {class_name: "PhcdevworksCoreModules::MarketingAffiliateVersions"}
+    has_paper_trail versions: {class_name: "PhcdevworksCoreModules::AffiliateLinkVersions"}
 
     # Relationships for Local
     belongs_to :user, class_name: "PhcdevworksAccounts::User"

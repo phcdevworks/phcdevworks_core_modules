@@ -1,8 +1,8 @@
 # This migration comes from phcdevworks_core_modules (originally 20210207051304)
-class CreatePhcdevworksCoreModulesMarketingAffiliateVersions < ActiveRecord::Migration[6.1]
+class CreatePhcdevworksCoreModulesAffiliateLinkVersions < ActiveRecord::Migration[6.1]
   TEXT_BYTES = 1_073_741_823
   def change
-    create_table :phcdevworks_core_modules_marketing_affiliate_versions do |t|
+    create_table :phcdevworks_core_modules_affiliate_link_versions do |t|
 
       t.string   :item_type, {:null=>false}
       t.integer  :item_id,   null: false
@@ -13,7 +13,7 @@ class CreatePhcdevworksCoreModulesMarketingAffiliateVersions < ActiveRecord::Mig
 
     end
 
-    add_index :phcdevworks_core_modules_marketing_affiliate_versions, %i(item_type item_id), :name => 'marketing_affiliate_versions'
+    add_index :phcdevworks_core_modules_affiliate_link_versions, %i(item_type item_id), :name => 'affiliate_link_versions'
 
   end
 end

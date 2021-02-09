@@ -34,7 +34,7 @@ module PhcdevworksCoreModules
             @affiliate_link.org_id = current_user.org_id
             respond_to do |format|
                 if @affiliate_link.save
-                    format.html { redirect_to marketing_affiliates_path, :flash => { :success => 'Affilate Link has been Added.' }}
+                    format.html { redirect_to affiliate_links_path, :flash => { :success => 'Affilate Link has been Added.' }}
                     format.json { render :show, status: :created, location: @affiliate_link }
                 else
                     format.html { render :new }
@@ -46,8 +46,8 @@ module PhcdevworksCoreModules
         # PATCH/PUT /affiliate/links/1
         def update
             respond_to do |format|
-                if @affiliate_link.update(marketing_affiliate_params)
-                    format.html { redirect_to marketing_affiliates_path, :flash => { :notice => 'Affiliate Link has been Updated.' }}
+                if @affiliate_link.update(affiliate_link_params)
+                    format.html { redirect_to affiliate_links_path, :flash => { :notice => 'Affiliate Link has been Updated.' }}
                     format.json { render :show, status: :ok, location: @affiliate_link }
                 else
                     format.html { render :edit }
@@ -60,7 +60,7 @@ module PhcdevworksCoreModules
         def destroy
             @affiliate_link.destroy
             respond_to do |format|
-                format.html { redirect_to marketing_optimizations_path, :flash => { :error => 'Affiliate Link and Post Connections have all been Removed.' }}
+                format.html { redirect_to affiliate_links_path, :flash => { :error => 'Affiliate Link and Post Connections have all been Removed.' }}
                 format.json { head :no_content }
             end
         end
