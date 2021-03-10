@@ -4,6 +4,14 @@ module PhcdevworksCoreModules
     # Clean URL Initialize
     extend FriendlyId
 
+    # Validations
+    validates :affiliate_link_name, presence: true
+    validates :affiliate_link_button_text, presence: false
+    validates :affiliate_link_url, presence: true
+    validates :affiliate_link_original_url, presence: false
+
+
+
     # Paper Trail Initialize
     has_paper_trail versions: {class_name: "PhcdevworksCoreModules::AffiliateLinkVersions"}
 
