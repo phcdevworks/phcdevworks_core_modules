@@ -4,7 +4,7 @@ require 'factory_bot_rails'
 
 # Load Test App (Moded for Engines)
 ENV['RAILS_ENV'] ||= 'test'
-File.expand_path('../test_app/config/environment.rb', __FILE__)
+File.expand_path('test_app/config/environment.rb', __FILE__)
 
 # Prevent database truncation if the environment is production
 abort("The Rails environment is running in production mode!") if Rails.env.production?
