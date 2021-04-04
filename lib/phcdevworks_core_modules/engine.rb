@@ -29,8 +29,9 @@ module PhcdevworksCoreModules
         # Mailer Dependencies
         require "mail_form"
 
-        # Load User Accounts
+        # Load Required PHC Plugins
         require "phcdevworks_accounts"
+        require "phcdevworks_accounts_stripe"
 
         # Engine Namespace
         isolate_namespace PhcdevworksCoreModules
