@@ -1,3 +1,3 @@
 module PhcdevworksCoreModules
-  VERSION = "7.1.4"
+  VERSION = "7.2.0"
 end
