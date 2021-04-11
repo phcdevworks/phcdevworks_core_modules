@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    phcdevworks_core_modules (7.2.1)
+    phcdevworks_core_modules (7.2.2)
       aws-sdk-s3 (~> 1.89)
       friendly_id (~> 5.4)
       google-cloud-storage (~> 1.30)
@@ -10,8 +10,8 @@ PATH
       mail_form (~> 1.9)
       mini_magick (~> 4.11)
       paper_trail (~> 11.1)
-      phcdevworks_accounts (~> 3.1)
-      phcdevworks_accounts_stripe (~> 0.1.6)
+      phcdevworks_accounts (~> 3.2)
+      phcdevworks_accounts_stripe (~> 0.1.7)
       phcdevworks_active_menus (~> 2.2)
       phcdevworks_core (~> 2.2)
       phcdevworks_notifications (~> 2.2)
@@ -235,7 +235,7 @@ GEM
       simple_token_authentication (~> 1.17)
       stripe (~> 5.30)
       wicked (~> 1.3)
-    phcdevworks_accounts_stripe (0.1.6)
+    phcdevworks_accounts_stripe (0.1.7)
       aws-sdk-s3 (~> 1.89)
       friendly_id (~> 5.4)
       google-cloud-storage (~> 1.30)
