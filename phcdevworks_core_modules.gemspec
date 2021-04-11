@@ -51,7 +51,7 @@ Gem::Specification.new do |spec|
 
   # Security Dependencies
   spec.add_dependency "phcdevworks_accounts", "~> 3.1"
-  spec.add_dependency "phcdevworks_accounts_stripe", "~> 0.1.5"
+  spec.add_dependency "phcdevworks_accounts_stripe", "~> 0.1.6"
 
   # Development Dependencies
   spec.add_development_dependency "factory_bot_rails", "~> 6.1"
