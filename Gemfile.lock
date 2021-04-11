@@ -215,7 +215,7 @@ GEM
     paper_trail (11.1.0)
       activerecord (>= 5.2)
       request_store (~> 1.1)
-    phcdevworks_accounts (3.2.2)
+    phcdevworks_accounts (3.2.3)
       aws-sdk-s3 (~> 1.89)
       devise (~> 4.7)
       friendly_id (~> 5.4)

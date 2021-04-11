@@ -277,9 +277,9 @@
             <!-- -PHC- Sidebar - Sidebar Navigation - PHCDevworks Core Modules -->
         <% end %>
 
-        <% if current_user && current_user.admin? %>
+        <% if current_user and current_user.admin? %>
             <li class="nav-header">Administration</li>
-            <% if defined?phcdevworks_accounts_stripe %>
+            <% if defined?phcdevworks_accounts_stripe and current_user.admin? %>
                 <!-- -PHC- Sidebar - Sidebar Navigation - PHCDevworks Accounts Stripe -->
                 <li class="has-sub">
                     <a href="javascript:;">
@@ -329,7 +329,7 @@
         <% end %>
 
         <li class="nav-header">Your Account</li>
-        <% if defined?phcdevworks_accounts_stripe && current_user %>
+        <% if defined?phcdevworks_accounts_stripe and current_user %>
             <!-- -PHC- Sidebar - Sidebar Navigation - PHCDevworks Accounts Stripe -->
             <li class="has-sub">
                 <a href="javascript:;">
